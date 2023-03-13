@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div clas="container">
+        <div class="main">
+            <h1>WELCOME</h1>
+            <div class="Signup">
+                <form action="sing-up" class="sing-up-form">
+                    <div class="main-user-info">
+                        <div class="input-user"><label for="fristname">First Name </label>
+                            <input class="input-style" type="text" name="firstname" id="firstname"
+                                placeholder="First Name" required pattern="[A-Za-z]{5,10}">
+                        </div>
+                        <div class="input-user">
+                            <label for="lastname">Last Name </label>
+                            <input class="input-style" type="text" name="lastname" id="lastname" placeholder="Last Name"
+                                required pattern="[A-Za-z]{5,10}">
+                        </div>
+
+                        <div class="input-user"> <label for="email">Email </label>
+                            <input class="input-style" type="email" name="email" id="email" placeholder="Email"
+                                required>
+                        </div>
+                        <div class="input-user">
+                            <label for="telephone">Mobile Number </label>
+                            <input class="input-style" type="tel" name="telephone" id="telephone"
+                                placeholder="Mobile Number" required pattern="[0-9]{10}">
+                        </div>
+
+                        <div class="input-user">
+                            <!-- (?=.*\d) This is a positive lookahead to see if a digit exists
+
+                                 (?=.*[a-z]) This is a positive lookahead to see if a lowercase letter exists
+
+                                 (?=.*[A-Z]) This is a positive lookahead to see if an uppercase letter exists
+
+                                .{6,} This matches for 6 or more of any character  -->
+
+                            <label for="password">Password </label>
+                            <input class="input-style" type="password" name="password" id="password"
+                                placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                        </div>
+                        <div class="input-user">
+                            <label for="confirm-pass">Confirm-Password </label>
+                            <input class="input-style" type="password" name="confirm-pass" id="confirm-pass"
+                                placeholder="Confirm Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                        </div>
+
+                        <div class="gender-box">
+                            <label for="gender">Gender</label>
+                            <input type="radio" id="male" name="gender" required><label>Male</label>
+                            <input type="radio" id="female" name="gender"><label>Female</label>
+                            <input type="radio" id="other" name="gender"><label>Other</label>
+                        </div>
+
+                    </div>
+                    <p> <input type="checkbox" required> By signing in, you agree to our <a href="#">Terms</a> and
+                        <a href="#">Conditions</a>
+                    </p>
+
+
+                    <button class="btnsignup">Sign In</button>
+                    <div>
+
+                        <p class="haveAcc">Have an Account? <a href="LoginForm2.html">Log In</a>
+                        </p>
+                    </div>
+                </form>
+
+                <div class=icons>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
